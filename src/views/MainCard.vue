@@ -1,0 +1,19 @@
+<template>
+  <div class="about">
+    <TitleCart />
+    <Box />
+  </div>
+</template>
+
+<script>
+import TitleCart from "../components/TitleCart.vue";
+import Box from "../components/Box.vue";
+
+export default {
+  name: "MainCard",
+  components: {
+    TitleCart,
+    Box,
+  },
+};
+</script>
