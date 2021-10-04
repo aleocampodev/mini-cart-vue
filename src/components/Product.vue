@@ -14,7 +14,8 @@
       <div class="product__card-box">
         <div class="product__card-text">
           <p>{{ $store.getters.selectedProduct.product }}</p>
-          <p>{{ $store.getters.selectedProduct.price }}</p>
+          <p>·</p>
+          <p>${{ $store.getters.selectedProduct.price }}</p>
         </div>
         <div class="product__card-buttons">
           <button

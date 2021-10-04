@@ -8,12 +8,7 @@
       <div class="box-left__store-wrapper">
         <div
           class="card"
-          :class="
-            product.id ===
-            ($store.state.activeItem && $store.state.activeItem.id)
-              ? 'card--active'
-              : ''
-          "
+          :class="product.id === $store.state.activeItem ? 'card--active' : ''"
           v-for="product in $store.getters.newProducts"
           :key="product.id"
         >
@@ -31,7 +26,7 @@
               }
             "
           >
-            {{ product.price }}
+            ${{ product.price }}
           </button>
         </div>
       </div>

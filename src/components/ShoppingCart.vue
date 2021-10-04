@@ -1,6 +1,5 @@
 <template>
   <div class="shopping-cart">
-    <h1>{{ $store.state.cart.length }}</h1>
     <p class="shopping-cart__paragraph">Shopping Cart</p>
     <div
       class="shopping-cart__image"
@@ -12,7 +11,7 @@
     </div>
     <div class="shopping-cart__price">
       <p>Total:</p>
-      <p>$25.50</p>
+      <p>${{ Math.round($store.getters.price) }}</p>
     </div>
     <div id="button"></div>
   </div>
@@ -34,9 +33,9 @@ export default {
       <script
         src="https://checkout.wompi.co/widget.js"
         data-render="button"
-        data-public-key="pub_test_X0zDA9xoKdePzhd8a0x9HAez7HgGO2fH"
+        data-public-key="pub_test_R1VZFXUauA9n7oMEsisu4h1pbVYXkDWB"
         data-currency="COP"
-        data-amount-in-cents="${Math.ceil(this.$store.getters.price)}"
+        data-amount-in-cents="${Math.round(this.$store.getters.price)}"
         data-reference="4XMPGKWWPKWQ"
       ><\/script>
     <\/form>`;

@@ -1,7 +1,7 @@
 <template>
   <div class="box">
-    <BoxLeft class="box-left" />
-    <BoxRight class="box-right" />
+    <BoxLeft />
+    <BoxRight />
   </div>
 </template>
 

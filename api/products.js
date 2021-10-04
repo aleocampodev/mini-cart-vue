@@ -17,95 +17,94 @@ export default [
     product: "Chocolisto",
     image: chocolisto,
     description:
-      "Contiene los 4 aportes del crecimiento: hierro, vitamina A , vitamina B1, B2 y B3 ,Calcio y Zinc.",
-    price: 1.79,
+      "Contains the 4 contributions of growth: iron, vitamin A and vitamin B1.",
+    price: 28.0,
   },
   {
     id: 2,
     product: "De Todito",
     image: deTodito,
-    description:
-      "Bolsa por 12 paquetes de 45 g / Bag with 12 packages of 1.5 oz.",
-    price: 1.79,
+    description: "Bag of 12 packages of 45 g / Bag of 12 packages of 1.5 oz.",
+    price: 14.0,
   },
   {
     id: 3,
     product: "Milo",
     image: milo,
     description:
-      "Milo alimento a base de malta y cocoa con vitaminas y minerales.",
-    price: 1.25,
+      "Milo food based on malt and cocoa with vitamins and minerals.",
+    price: 13.0,
   },
   {
     id: 4,
     product: "Zucaritas",
     image: zucaritas,
     description:
-      "Cereal kelloggs zucaritas, son hojuelas de maiz azucaradas con vitaminas y minerales, con un riquisimo sabor",
-    price: 1.89,
+      "Kelloggs zucaritas cereal, they are corn flakes sweetened with vitamins and minerals, with a delicious flavor.",
+    price: 22.0,
   },
   {
     id: 5,
     product: "Leche",
     image: leche,
     description:
-      "Leche entera, que aporta una gran cantidad de vitaminas y prebióticos ideales para el cuidado de tu familia.",
-    price: 1.23,
+      "Whole milk, which provides a large amount of vitamins and prebiotics ideal for taking care of your family.",
+    price: 12.0,
   },
   {
     id: 6,
     product: "Galletas Saltin",
     image: galletasSaltin,
     description:
-      "las Galletas Saltín Noel Tradicional, son fuente de Vitamina B1, B2 y B3, Calcio, Hierro y Ácido fólico, lo que las convierte en el complemento ideal para una dieta sana y balanceada.",
-    price: 1.55,
+      "las Galletas Saltín Noel Tradicional, son fuente de Vitamina B1, B2 y B3, Calcio, Hierro y Ácido fólico.",
+    price: 20.5,
   },
   {
     id: 7,
     product: "Avena Quaker",
     image: avena,
     description:
-      "Avena QUAKER molida desayuno nutritivo, fuente de energía natural.",
-    price: 1.09,
+      "QUAKER ground oats nutritious breakfast, source of natural energy.",
+    price: 13.85,
   },
   {
     id: 8,
     product: "Salsa de tomate",
     image: salsadeTomate,
     description:
-      "Auténtica salsa de tomate con un porcentaje de sólidos solubles de tomate que traduce mejor sabor y color natural.",
-    price: 1.39,
+      "Authentic tomato sauce with a percentage of soluble tomato solids that translates better flavor and natural color.",
+    price: 12.5,
   },
   {
     id: 9,
     product: "Pan",
     image: pan,
     description:
-      "Es un pan rico y nutritivo, que cuenta con nutrimentos como calcio, y una mezcla de vitaminas que ayudan a fortalecer el cuerpo humano y a desarrollar el crecimiento infantil.",
-    price: 1.69,
+      "It is a rich and nutritious bread, which has nutrients such as calcium.",
+    price: 15.689,
   },
   {
     id: 10,
     product: "Salchicha",
     image: salchicha,
     description:
-      "Disfruta todo el inigualable sabor del oeste con esta jugosa y doradita salchicha. Prepárala asada y siente su inigualable sabor.",
-    price: 1.59,
+      "Enjoy all the unique flavor of the west with this juicy and golden sausage. Prepare it roasted and feel its unique flavor.",
+    price: 11.25,
   },
   {
     id: 11,
     product: "Mortadela",
     image: mortadela,
     description:
-      "Delicioso sabor tradicional con la calidad que solo te puede brindar Zenú. Es buena fuente de proteína y 25% reducida en sodio",
-    price: 1.39,
+      "Delicious traditional flavor with the quality that only Zenú can give you.",
+    price: 9.83,
   },
   {
     id: 12,
     product: "Arroz",
     image: arroz,
     description:
-      "El Arroz Roa Integral es un alimento completo, excelente fuente de fibra que favorece a la digestión y aporta energía; naturalmente libre de gluten, no contiene grasas, colesterol y sodio",
-    price: 1.19,
+      "Brown Roa Rice is a complete food, an excellent source of fiber that favors digestion and provides energy.",
+    price: 10.34,
   },
 ];

@@ -1,15 +1,21 @@
 @import "../abstracts/variables";
 
 .box-left {
-  flex: 1;
+  flex: 2;
   margin: 30px;
 
   &__icon {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     background-color: $color-purple;
     border-radius: 8px;
     margin-top: 10px;
+
+    & > span {
+      color: white;
+      font-size: 55px;
+      margin-top: 8px;
+    }
   }
 
   &__store-paragraph {
@@ -55,9 +61,19 @@
 }
 
 .card {
-  border: 2px solid gray;
+  border: 2px solid #d3d3d3;
 
   &--active {
     border: 2px solid $color-purple;
+  }
+
+  & > button {
+    border: none;
+    background-color: $color-purple;
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
   }
 }

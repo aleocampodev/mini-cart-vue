@@ -6,41 +6,46 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    margin-right: 15px;
   }
 
   &__button-cart {
     display: flex;
-    width: 90px;
-    height: 50px;
-    background-color: $color-purple;
-    margin: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: $color-purple-ligth;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
 
     & > span {
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-    }
-
-    & > span + p {
+      height: 100%;
+      font-weight: 900;
       flex: 1;
-      color: white;
+      font-size: 25px;
     }
   }
 
   &__button-remove {
-    width: 30px;
-    height: 50px;
-    background-color: purple;
+    width: 40px;
+    height: 40px;
+    background-color: $color-purple;
     cursor: pointer;
-
-    & > p {
-      font-weight: 900;
-      color: white;
-    }
+    border: none;
+    margin-top: 30px;
+    color: white;
+    font-weight: 900;
+    margin-right: 20px;
+    font-size: larger;
   }
 
   &__paragraph {
-    margin-top: 30px;
+    margin-top: 75px;
+    font-size: 20px;
+    border-top: 1px solid $color-purple-ligth;
   }
 }

@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <p v-if="$store.state.activeDisplay === 'product'">Mini Market - Product</p>
-    <p v-else-if="$store.state.activeDisplay === 'cart'">Mini Market - Cart</p>
-    <p v-else>Mini Market - Home</p>
+  <div class="title-cart">
+    <h2 v-if="$store.state.activeDisplay === 'product'">
+      Mini Market · Product
+    </h2>
+    <h2 v-else-if="$store.state.activeDisplay === 'cart'">
+      Mini Market · Cart
+    </h2>
+    <h2 v-else>Mini Market · Home</h2>
   </div>
 </template>
 
