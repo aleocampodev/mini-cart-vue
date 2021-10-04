@@ -1,3 +1,6 @@
+@import "abstracts/animations.scss";
+@import "abstracts/variables.scss";
+
 @import "base/base.scss";
 
 @import "views/home.scss";
@@ -6,3 +9,7 @@
 @import "components/box.scss";
 @import "components/box-left.scss";
 @import "components/box-right.scss";
+@import "components/product.scss";
+@import "components/shoppingCart.scss";
+
+@import "queries.scss";

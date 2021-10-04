@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "lodash-es": "^4.17.21",
+    "postscribe": "^2.0.8",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -42,7 +44,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-useless-escape": "off"
+    }
   },
   "browserslist": [
     "> 1%",

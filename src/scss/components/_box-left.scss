@@ -1,0 +1,63 @@
+@import "../abstracts/variables";
+
+.box-left {
+  flex: 1;
+  margin: 30px;
+
+  &__icon {
+    height: 80px;
+    width: 80px;
+    background-color: $color-purple;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  &__store-paragraph {
+    margin-top: 20px;
+    font-weight: 900;
+    text-align: left;
+    border-bottom: 1px solid $color-purple-ligth;
+    padding: 5px;
+    color: $color-purple;
+  }
+
+  &__store-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 40px;
+
+    & > div > img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &-10 {
+      grid-row: 3;
+    }
+
+    .box-number {
+      display: flex;
+      position: absolute;
+    }
+  }
+}
+
+.box-number {
+  width: 35px;
+  height: 35px;
+  background-color: $color-purple;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid gray;
+
+  &--active {
+    border: 2px solid $color-purple;
+  }
+}

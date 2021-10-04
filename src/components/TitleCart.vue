@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>Mini Market - Cart</p>
-    <router-link to="/">Home</router-link>
+    <p>Mini Market - Home</p>
   </div>
 </template>
 

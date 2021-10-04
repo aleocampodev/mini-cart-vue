@@ -1,0 +1,70 @@
+@import "../abstracts/variables";
+
+.product {
+  &__paragraph {
+    margin-top: 15px;
+    font-weight: 900;
+    text-align: left;
+    border-bottom: 1px solid $color-purple-ligth;
+    padding: 5px;
+    color: $color-purple;
+  }
+
+  &__image {
+    margin: 5px;
+    display: flex;
+    height: 250px;
+
+    & > p {
+      background-color: $color-purple;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > h4 {
+      flex: 1;
+    }
+  }
+
+  &__card {
+    &-box {
+      display: flex;
+      background-color: beige;
+      border-bottom: 1px solid $color-purple-ligth;
+    }
+
+    &-text {
+      display: flex;
+      flex: 1;
+
+      & > p {
+        font-weight: 900;
+        margin-right: 10px;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+
+      & > button {
+        height: 30px;
+        width: 30px;
+        &:first-child {
+          background-color: beige;
+        }
+      }
+    }
+
+    &-description {
+      border-bottom: 1px solid $color-purple-ligth;
+    }
+  }
+}

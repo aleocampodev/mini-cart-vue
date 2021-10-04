@@ -10,7 +10,7 @@ import TitleCart from "../components/TitleCart.vue";
 import Box from "../components/Box.vue";
 
 export default {
-  name: "MainCard",
+  name: "Cart",
   components: {
     TitleCart,
     Box,

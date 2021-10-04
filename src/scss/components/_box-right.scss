@@ -1,0 +1,46 @@
+.box-right {
+  flex: 1;
+  margin: 20px;
+
+  &__icon-cart {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  &__button-cart {
+    display: flex;
+    width: 90px;
+    height: 50px;
+    background-color: $color-purple;
+    margin: 30px;
+
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    & > span + p {
+      flex: 1;
+      color: white;
+    }
+  }
+
+  &__button-remove {
+    width: 30px;
+    height: 50px;
+    background-color: purple;
+    cursor: pointer;
+
+    & > p {
+      font-weight: 900;
+      color: white;
+    }
+  }
+
+  &__paragraph {
+    margin-top: 30px;
+  }
+}
