@@ -1,6 +1,6 @@
 .box-right {
   flex: 1;
-  margin: 20px;
+  margin: 35px;
 
   &__icon-cart {
     display: flex;
@@ -44,7 +44,7 @@
   }
 
   &__paragraph {
-    margin-top: 75px;
+    margin-top: 65px;
     font-size: 20px;
     border-top: 1px solid $color-purple-ligth;
   }

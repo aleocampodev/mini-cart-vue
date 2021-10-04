@@ -65,7 +65,7 @@ export default [
     image: avena,
     description:
       "QUAKER ground oats nutritious breakfast, source of natural energy.",
-    price: 13.85,
+    price: 13.8,
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ export default [
     image: pan,
     description:
       "It is a rich and nutritious bread, which has nutrients such as calcium.",
-    price: 15.689,
+    price: 15.6,
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ export default [
     image: salchicha,
     description:
       "Enjoy all the unique flavor of the west with this juicy and golden sausage. Prepare it roasted and feel its unique flavor.",
-    price: 11.25,
+    price: 11.2,
   },
   {
     id: 11,
@@ -105,6 +105,6 @@ export default [
     image: arroz,
     description:
       "Brown Roa Rice is a complete food, an excellent source of fiber that favors digestion and provides energy.",
-    price: 10.34,
+    price: 10.3,
   },
 ];

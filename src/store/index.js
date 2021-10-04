@@ -80,7 +80,6 @@ export default new Vuex.Store({
     },
     getLocal({ commit }) {
       const localCart = localStorage.getItem("cart");
-      console.log(localCart);
       if (localCart) {
         commit("addToCart", JSON.parse(localCart));
       }

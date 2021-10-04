@@ -1,14 +1,16 @@
 <template>
   <div class="product">
-    <p class="product__paragraph">Product</p>
+    <h3 class="product__paragraph">Product</h3>
     <div class="product__image">
-      <img
-        :src="$store.getters.selectedProduct.image"
-        :alt="$store.getters.selectedProduct.product"
-      />
       <p v-if="$store.getters.selectedProduct.quantity">
         {{ $store.getters.selectedProduct.quantity }}
       </p>
+      <div class="product-item">
+        <img
+          :src="$store.getters.selectedProduct.image"
+          :alt="$store.getters.selectedProduct.product"
+        />
+      </div>
     </div>
     <div class="product__card">
       <div class="product__card-box">

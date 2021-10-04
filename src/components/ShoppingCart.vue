@@ -1,6 +1,6 @@
 <template>
   <div class="shopping-cart">
-    <p class="shopping-cart__paragraph">Shopping Cart</p>
+    <h3 class="shopping-cart__paragraph">Shopping Cart</h3>
     <div
       class="shopping-cart__image"
       v-for="item in $store.state.cart"

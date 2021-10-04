@@ -1,8 +1,9 @@
 @import "../abstracts/variables";
+@import "../abstracts/variables";
 
 .box-left {
   flex: 2;
-  margin: 30px;
+  margin: 35px;
 
   &__icon {
     height: 70px;
@@ -39,10 +40,6 @@
       height: 100px;
     }
 
-    &-10 {
-      grid-row: 3;
-    }
-
     .box-number {
       display: flex;
       position: absolute;
@@ -62,6 +59,7 @@
 
 .card {
   border: 2px solid #d3d3d3;
+  transition: all 500ms;
 
   &--active {
     border: 2px solid $color-purple;
@@ -75,5 +73,14 @@
     color: white;
     font-size: 18px;
     cursor: pointer;
+    transition: all 500ms;
+
+    &:hover {
+      @extend .hover-button;
+    }
+  }
+
+  &:hover {
+    @extend .scale-card;
   }
 }

@@ -2,7 +2,7 @@
 
 .product {
   &__paragraph {
-    margin-top: 15px;
+    margin-top: 32px;
     font-weight: 900;
     text-align: left;
     border-bottom: 1px solid $color-purple-ligth;
@@ -24,27 +24,34 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    & > h4 {
-      flex: 1;
+      margin-top: -2px;
     }
   }
 
   &__card {
     &-box {
       display: flex;
-      background-color: beige;
+      margin-top: 20px;
       border-bottom: 1px solid $color-purple-ligth;
     }
 
     &-text {
       display: flex;
       flex: 1;
+      font-size: 25px;
+      margin-top: 10px;
 
       & > p {
         font-weight: 900;
         margin-right: 10px;
+
+        &:nth-child(2) {
+          color: $color-purple-ligth;
+        }
+
+        &:last-child {
+          color: $color-purple;
+        }
       }
     }
 
@@ -55,16 +62,34 @@
       margin-right: 15px;
 
       & > button {
-        height: 30px;
-        width: 30px;
-        &:first-child {
-          background-color: beige;
+        height: 40px;
+        width: 50px;
+        border: none;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: 900;
+
+        &:last-child {
+          background-color: $color-purple;
+          color: white;
         }
       }
     }
 
     &-description {
       border-bottom: 1px solid $color-purple-ligth;
+      padding: 20px;
+      margin: 0;
     }
+  }
+}
+
+.product-item {
+  flex: 1;
+  margin-top: 5px;
+
+  & > img {
+    height: 250px;
+    width: 250px;
   }
 }

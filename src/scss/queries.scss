@@ -1,0 +1,110 @@
+@media only screen and (min-width: 1201) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    height: 1958px;
+
+    &-left {
+      flex: none;
+    }
+
+    &-right {
+      flex: none;
+    }
+  }
+}
+
+@media (min-width: 0) and (max-width: 500px) {
+  .box {
+    &-left {
+      &__store-wrapper {
+        & > div > img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      &__icon {
+        width: 50px;
+        height: 50px;
+
+        & > span {
+          font-size: 35px;
+        }
+      }
+    }
+
+    &-right {
+      &__button {
+        &-cart {
+          & > span {
+            font-size: 17px;
+          }
+        }
+      }
+
+      &__paragraph {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .card {
+    & > button {
+      font-size: 12px;
+      width: 50px;
+      height: 30px;
+    }
+
+    & > img {
+      margin-top: 15px;
+    }
+  }
+
+  .box-number {
+    display: flex;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .product {
+    &__image {
+      height: 200px;
+    }
+    &-item {
+      & > img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &__card {
+      &-text {
+        font-size: 16px;
+      }
+
+      &-buttons {
+        & > button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .shopping {
+    &-cart {
+      &__price {
+        font-size: 22px;
+      }
+    }
+  }
+}
