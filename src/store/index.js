@@ -24,7 +24,6 @@ export default new Vuex.Store({
       state.activeDisplay = payload;
     },
     addItem(state, getters) {
-      console.log(getters, "estudio");
       const item = { ...getters.selectedProduct, quantity: 1 };
       const isDuplicated =
         state.cart.findIndex((item) => {
@@ -43,21 +42,55 @@ export default new Vuex.Store({
         state.cart.push(item);
       }
     },
-    //changeItemQuantity(state, payload) {},
-    deleteItem(state, payload) {
-      const newCart = state.cart.filter((item) => {
-        item.id !== payload;
+    removeItem(state) {
+      const selectedItem = state.cart.find((item) => {
+        return item.id === state.activeItem;
       });
-      state.cart = newCart;
+      console.log(selectedItem);
+
+      const shouldDelete = selectedItem.quantity === 1;
+
+      if (shouldDelete) {
+        const newCart = state.cart.filter((item) => {
+          item.id === state.activeItem;
+        });
+        state.cart = newCart;
+      } else {
+        const newCart = state.cart.map((item) =>
+          item.id === state.activeItem
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        );
+        state.cart = newCart;
+      }
     },
     showCart(state) {
       Object.assign(state, { activeItem: null, activeDisplay: "cart" });
     },
+    addToCart(state, payload) {
+      state.cart = payload;
+    },
   },
   actions: {
-    addItem({ commit, getters }) {
-      console.log(getters, "osa");
+    addItem({ commit, getters, dispatch }) {
       commit("addItem", getters);
+      dispatch("saveLocal");
+    },
+    removeItem({ commit, getters, dispatch }) {
+      commit("removeItem", getters);
+      dispatch("saveLocal");
+    },
+    saveLocal({ state }) {
+      const stateCart = JSON.stringify(state.cart);
+      console.log(stateCart, "MAQUILLAJE");
+      localStorage.setItem("cart", stateCart);
+    },
+    getLocal({ commit }) {
+      const localCart = localStorage.getItem("cart");
+      console.log(localCart);
+      if (localCart) {
+        commit("addToCart", JSON.parse(localCart));
+      }
     },
   },
   getters: {
@@ -84,6 +117,11 @@ export default new Vuex.Store({
     },
     selectedProduct(state, getters) {
       return getters.newProducts.find((item) => item.id === state.activeItem);
+    },
+    price(state) {
+      return state.cart.reduce((acc, itemCart) => {
+        return itemCart.quantity * itemCart.price + acc;
+      }, 0);
     },
   },
   modules: {},

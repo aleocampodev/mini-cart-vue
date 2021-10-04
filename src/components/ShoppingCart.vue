@@ -26,17 +26,21 @@ export default {
     return {};
   },
   mounted() {
-    const script = `<form>
+    postscribe("#button", this.script);
+  },
+  computed: {
+    script() {
+      return `<form>
       <script
         src="https://checkout.wompi.co/widget.js"
         data-render="button"
         data-public-key="pub_test_X0zDA9xoKdePzhd8a0x9HAez7HgGO2fH"
         data-currency="COP"
-        data-amount-in-cents="4950000"
+        data-amount-in-cents="${Math.ceil(this.$store.getters.price)}"
         data-reference="4XMPGKWWPKWQ"
       ><\/script>
     <\/form>`;
-    postscribe("#button", script);
+    },
   },
 };
 </script>

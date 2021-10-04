@@ -10,7 +10,7 @@
         class="box-right__button-cart"
       >
         <span class="material-icons">shopping_cart</span>
-        <span>$0</span>
+        <span>${{ $store.getters.price }}</span>
       </button>
       <button class="box-right__button-remove">x</button>
     </div>

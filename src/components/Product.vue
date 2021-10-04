@@ -17,7 +17,15 @@
           <p>{{ $store.getters.selectedProduct.price }}</p>
         </div>
         <div class="product__card-buttons">
-          <button>-</button>
+          <button
+            @click="
+              () => {
+                $store.dispatch('removeItem');
+              }
+            "
+          >
+            -
+          </button>
           <button
             @click="
               () => {
