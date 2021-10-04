@@ -7,12 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     products,
-    rightPanelState: {
-      status: null,
-      payload: null,
-    },
     cart: [],
-    paymentStatus: null,
     activeItem: null,
     activeDisplay: null,
   },
@@ -46,7 +41,6 @@ export default new Vuex.Store({
       const selectedItem = state.cart.find((item) => {
         return item.id === state.activeItem;
       });
-      console.log(selectedItem);
 
       const shouldDelete = selectedItem.quantity === 1;
 
@@ -82,7 +76,6 @@ export default new Vuex.Store({
     },
     saveLocal({ state }) {
       const stateCart = JSON.stringify(state.cart);
-      console.log(stateCart, "MAQUILLAJE");
       localStorage.setItem("cart", stateCart);
     },
     getLocal({ commit }) {
