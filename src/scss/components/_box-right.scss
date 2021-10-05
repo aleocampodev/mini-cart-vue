@@ -1,3 +1,5 @@
+@import "../abstracts/mixins";
+
 .box-right {
   flex: 1;
   margin: 35px;
@@ -10,23 +12,12 @@
   }
 
   &__button-cart {
-    display: flex;
-    width: 100px;
-    height: 40px;
-    background-color: $color-purple-ligth;
-    margin-top: 30px;
-    border: none;
-    cursor: pointer;
+    @include styleButton;
+    background-color: $color-purple;
 
     & > span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include styleChild;
       color: white;
-      height: 100%;
-      font-weight: 900;
-      flex: 1;
-      font-size: 25px;
     }
   }
 
@@ -47,5 +38,16 @@
     margin-top: 65px;
     font-size: 20px;
     border-top: 1px solid $color-purple-ligth;
+  }
+}
+
+.button-cart {
+  @include styleButton;
+  background-color: $color-purple-ligth;
+  border: 1px solid $color-purple;
+
+  & > span {
+    @include styleChild;
+    color: $color-purple;
   }
 }

@@ -7,12 +7,21 @@
             $store.commit('showCart');
           }
         "
-        class="box-right__button-cart"
+        :class="
+          $store.state.activeDisplay === 'cart'
+            ? 'button-cart'
+            : 'box-right__button-cart'
+        "
       >
         <span class="material-icons">shopping_cart</span>
         <span>${{ Math.ceil($store.getters.price) }}</span>
       </button>
-      <button class="box-right__button-remove">x</button>
+      <button
+        class="box-right__button-remove"
+        v-if="$store.state.activeDisplay === 'cart'"
+      >
+        x
+      </button>
     </div>
     <div
       class="box-right__paragraph"
