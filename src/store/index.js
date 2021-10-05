@@ -13,6 +13,7 @@ export default new Vuex.Store({
   },
   mutations: {
     selectItem(state, payload) {
+      console.log(state, "hola estado ");
       Object.assign(state, payload);
     },
     changeDisplay(state, payload) {
@@ -20,12 +21,14 @@ export default new Vuex.Store({
     },
     addItem(state, getters) {
       const item = { ...getters.selectedProduct, quantity: 1 };
+
       const isDuplicated =
         state.cart.findIndex((item) => {
           return (
             item.id === (getters.selectedProduct && getters.selectedProduct.id)
           );
         }) > -1;
+
       if (isDuplicated) {
         const newCart = state.cart.map((item) =>
           item.id === state.activeItem
@@ -41,12 +44,14 @@ export default new Vuex.Store({
       const selectedItem = state.cart.find((item) => {
         return item.id === state.activeItem;
       });
+      console.log(selectedItem, "item seleccionado");
 
-      const shouldDelete = selectedItem.quantity === 1;
+      const shouldDelete = selectedItem.quantity === 0;
+      console.log(shouldDelete, "eliminar");
 
       if (shouldDelete) {
         const newCart = state.cart.filter((item) => {
-          item.id === state.activeItem;
+          return item.id === state.activeItem;
         });
         state.cart = newCart;
       } else {
@@ -56,6 +61,7 @@ export default new Vuex.Store({
             : item
         );
         state.cart = newCart;
+        console.log(newCart, "nuevo carrito");
       }
     },
     showCart(state) {
@@ -71,6 +77,7 @@ export default new Vuex.Store({
       dispatch("saveLocal");
     },
     removeItem({ commit, getters, dispatch }) {
+      console.log(getters);
       commit("removeItem", getters);
       dispatch("saveLocal");
     },
@@ -96,6 +103,7 @@ export default new Vuex.Store({
       const findItem = state.cart.find(
         (item) => item.id === (state.activeItem && state.activeItem.id)
       );
+      console.log(findItem, "encontrar item");
       return state.cart.length && findItem ? findItem.quantity : 0;
     },
     newProducts(state) {

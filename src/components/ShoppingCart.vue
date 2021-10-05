@@ -11,7 +11,7 @@
     </div>
     <div class="shopping-cart__price">
       <p>Total:</p>
-      <p>${{ Math.round($store.getters.price) }}</p>
+      <p>${{ $store.getters.price }}</p>
     </div>
     <div id="button"></div>
   </div>
@@ -35,7 +35,7 @@ export default {
         data-render="button"
         data-public-key="pub_test_R1VZFXUauA9n7oMEsisu4h1pbVYXkDWB"
         data-currency="COP"
-        data-amount-in-cents="${Math.round(this.$store.getters.price)}"
+        data-amount-in-cents="${this.$store.getters.price}"
         data-reference="4XMPGKWWPKWQ"
       ><\/script>
     <\/form>`;

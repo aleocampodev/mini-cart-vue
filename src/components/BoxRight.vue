@@ -14,11 +14,16 @@
         "
       >
         <span class="material-icons">shopping_cart</span>
-        <span>${{ Math.ceil($store.getters.price) }}</span>
+        <span>${{ $store.getters.price }}</span>
       </button>
       <button
         class="box-right__button-remove"
         v-if="$store.state.activeDisplay === 'cart'"
+        @click="
+          () => {
+            $store.dispatch('removeItem');
+          }
+        "
       >
         x
       </button>
