@@ -21,7 +21,7 @@
         v-if="$store.state.activeDisplay === 'cart'"
         @click="
           () => {
-            $store.dispatch('removeItem');
+            $store.commit('removeProduct');
           }
         "
       >

@@ -18,14 +18,14 @@ export default [
     image: chocolisto,
     description:
       "Contains the 4 contributions of growth: iron, vitamin A and vitamin B1.",
-    price: 28.563,
+    price: 28563,
   },
   {
     id: 2,
     product: "De Todito",
     image: deTodito,
     description: "Bag of 12 packages of 45 g / Bag of 12 packages of 1.5 oz.",
-    price: 14.569,
+    price: 14569,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export default [
     image: milo,
     description:
       "Milo food based on malt and cocoa with vitamins and minerals.",
-    price: 12.645,
+    price: 12645,
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export default [
     image: zucaritas,
     description:
       "Kelloggs zucaritas cereal, they are corn flakes sweetened with vitamins and minerals, with a delicious flavor.",
-    price: 22.546,
+    price: 22546,
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export default [
     image: leche,
     description:
       "Whole milk, which provides a large amount of vitamins and prebiotics ideal for taking care of your family.",
-    price: 12.298,
+    price: 12298,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export default [
     image: galletasSaltin,
     description:
       "las Galletas Saltín Noel Tradicional, son fuente de Vitamina B1, B2 y B3, Calcio, Hierro y Ácido fólico.",
-    price: 21.563,
+    price: 21563,
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ export default [
     image: avena,
     description:
       "QUAKER ground oats nutritious breakfast, source of natural energy.",
-    price: 13.822,
+    price: 13822,
   },
   {
     id: 8,
@@ -73,7 +73,7 @@ export default [
     image: salsadeTomate,
     description:
       "Authentic tomato sauce with a percentage of soluble tomato solids that translates better flavor and natural color.",
-    price: 12.533,
+    price: 12533,
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ export default [
     image: pan,
     description:
       "It is a rich and nutritious bread, which has nutrients such as calcium.",
-    price: 15.677,
+    price: 15677,
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ export default [
     image: salchicha,
     description:
       "Enjoy all the unique flavor of the west with this juicy and golden sausage. Prepare it roasted and feel its unique flavor.",
-    price: 11.299,
+    price: 11299,
   },
   {
     id: 11,
@@ -97,7 +97,7 @@ export default [
     image: mortadela,
     description:
       "Delicious traditional flavor with the quality that only Zenú can give you.",
-    price: 9.839,
+    price: 9839,
   },
   {
     id: 12,
@@ -105,6 +105,6 @@ export default [
     image: arroz,
     description:
       "Brown Roa Rice is a complete food, an excellent source of fiber that favors digestion and provides energy.",
-    price: 10.399,
+    price: 10309,
   },
 ];
