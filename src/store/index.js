@@ -20,7 +20,6 @@ export default new Vuex.Store({
     }*/
     addItem(state, getters) {
       const item = { ...getters.selectedProduct, quantity: 1 };
-      //console.log(item, "hola item product");
 
       const isDuplicated =
         state.cart.findIndex((item) => {
