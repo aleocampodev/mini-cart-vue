@@ -15,9 +15,6 @@ export default new Vuex.Store({
     selectItem(state, payload) {
       Object.assign(state, payload);
     },
-    /*changeDisplay(state, payload) {
-      state.activeDisplay = payload;
-    }*/
     addItem(state, getters) {
       const item = { ...getters.selectedProduct, quantity: 1 };
 
@@ -36,7 +33,6 @@ export default new Vuex.Store({
             : item
         );
         state.cart = newCart;
-        //console.log(newCart, "ISdUPLICATED");
       } else {
         state.cart.push(item);
       }
@@ -45,17 +41,14 @@ export default new Vuex.Store({
       const selectedItem = state.cart.find((item) => {
         return item.id === state.activeItem;
       });
-      //console.log(selectedItem, "item seleccionado");
 
       const shouldDelete = selectedItem.quantity === 0;
-      //console.log(shouldDelete, " deberia eliminar");
 
       if (shouldDelete) {
         const newCart = state.cart.filter((item) => {
           return item.id === state.activeItem;
         });
         state.cart = newCart;
-        //console.log(newCart, "nuevo carro eliminar");
       } else {
         const newCart = state.cart.map((item) =>
           item.id === state.activeItem
@@ -63,15 +56,11 @@ export default new Vuex.Store({
             : item
         );
         state.cart = newCart;
-        //console.log(newCart, "nuevo carrito");
       }
     },
     showCart(state) {
       Object.assign(state, { activeItem: null, activeDisplay: "cart" });
     },
-    /*addToCart(state, payload) {
-      state.cart = payload;
-    }*/
     removeProduct(state) {
       state.activeDisplay = null;
     },
@@ -98,18 +87,6 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    /*cartValue: (state) => {
-      return state.cart.length;
-    }*/
-    /*display(state) {
-      return state.activeItem && state.activeItem.id ? "product" : null;
-    }*/
-    /*activeQuantity(state) {
-      const findItem = state.cart.find(
-        (item) => item.id === (state.activeItem && state.activeItem.id)
-      );
-      return state.cart.length && findItem ? findItem.quantity : 0;
-    }*/
     newProducts(state) {
       const combinedProducts = state.products.map((item) => {
         console.log(item, "hola item");
